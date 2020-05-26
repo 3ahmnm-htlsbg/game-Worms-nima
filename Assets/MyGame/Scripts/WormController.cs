@@ -2,18 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class WormController : MonoBehaviour
 {
     public KeyCode jumpKey;
     public KeyCode forwardsKey;
     public KeyCode backwardsKey;
+    public KeyCode downKey;
+    public KeyCode shootKey;
 
     public Rigidbody rb;
 
     public Vector3 y;
     public Vector3 z;
-    public ForceMode f;
 
+    public Vector3 position;
+    public Quaternion quat;
+
+
+
+    public GameObject projectile;
 
     // Update is called once per frame
     void Update()
@@ -26,7 +35,7 @@ public class WormController : MonoBehaviour
 
         if (Input.GetKeyDown(forwardsKey))
         {
-            Debug.Log("Die Forward Taste wurde gedrückt");
+            Debug.Log("Die Forwards Taste wurde gedrückt");
             rb.AddForce(z);
         }
 
@@ -36,5 +45,17 @@ public class WormController : MonoBehaviour
             rb.AddForce(-z);
         }
 
+        if (Input.GetKeyDown(downKey))
+        {
+            Debug.Log("Die Down Taste wurde gedrückt");
+            rb.AddForce(-y);
+        }
+
+        if (Input.GetKeyDown(shootKey))
+        {
+            Debug.Log("Die Shoot Taste wurde gedrückt");
+            Instantiate(projectile, position, quat);
+
+        }
     }
 }

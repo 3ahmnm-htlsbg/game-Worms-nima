@@ -700,10 +700,15 @@ MonoBehaviour:
   jumpKey: 119
   forwardsKey: 100
   backwardsKey: 97
+  downKey: 115
+  shootKey: 101
   rb: {fileID: 447636342}
   y: {x: 0, y: 200, z: 0}
   z: {x: 0, y: 0, z: 200}
-  f: 0
+  position: {x: 0, y: 0, z: 0}
+  quat: {x: 0, y: 0, z: 0, w: 0}
+  projectile: {fileID: 6736212027083469989, guid: 835c41beec8592948a5a1c403a32b7b7,
+    type: 3}
 --- !u!64 &447636345
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2095,10 +2100,14 @@ MonoBehaviour:
   jumpKey: 273
   forwardsKey: 0
   backwardsKey: 0
+  downKey: 0
+  shootKey: 0
   rb: {fileID: 0}
   y: {x: 0, y: 5, z: 0}
   z: {x: 0, y: 0, z: 5}
-  f: 0
+  position: {x: 0, y: 0, z: 0}
+  quat: {x: 0, y: 0, z: 0, w: 0}
+  projectile: {fileID: 0}
 --- !u!136 &1354488851
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2305,10 +2314,15 @@ MonoBehaviour:
   jumpKey: 273
   forwardsKey: 276
   backwardsKey: 275
+  downKey: 274
+  shootKey: 0
   rb: {fileID: 1546301018}
   y: {x: 0, y: 200, z: 0}
   z: {x: 0, y: 0, z: -200}
-  f: 0
+  position: {x: 0, y: 0, z: 0}
+  quat: {x: 0, y: 0, z: 0, w: 0}
+  projectile: {fileID: 6736212027083469989, guid: 835c41beec8592948a5a1c403a32b7b7,
+    type: 3}
 --- !u!54 &1546301018
 Rigidbody:
   m_ObjectHideFlags: 0

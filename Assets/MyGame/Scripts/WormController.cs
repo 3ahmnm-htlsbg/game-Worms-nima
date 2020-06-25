@@ -16,13 +16,18 @@ public class WormController : MonoBehaviour
 
     public Vector3 y;
     public Vector3 z;
-
+   
     public Vector3 position;
     public Quaternion quat;
-
-
+    
+    
 
     public GameObject projectile;
+    public GameObject weapon;
+    public GameObject weaponPivot;
+
+    public float projectileSpeed;
+
 
     // Update is called once per frame
     void Update()
@@ -41,8 +46,9 @@ public class WormController : MonoBehaviour
 
         if (Input.GetKeyDown(backwardsKey))
         {
-            Debug.Log("Die Backward Taste wurde gedrückt");
+            Debug.Log("Die Backwards Taste wurde gedrückt");
             rb.AddForce(-z);
+            
         }
 
         if (Input.GetKeyDown(downKey))
@@ -51,11 +57,25 @@ public class WormController : MonoBehaviour
             rb.AddForce(-y);
         }
 
+       
+
         if (Input.GetKeyDown(shootKey))
         {
             Debug.Log("Die Shoot Taste wurde gedrückt");
-            Instantiate(projectile, position, quat);
 
+            GameObject weapon = weaponPivot.transform.parent.gameObject;
+
+            GameObject newProjectiles = Instantiate(projectile, weaponPivot.transform.position, quat);
+            //newProjectiles.transform.Rotate(Vector3.forward * 90);
+
+            Rigidbody projectilesRb = newProjectiles.gameObject.GetComponent<Rigidbody>();
+            newProjectiles.transform.parent = weaponPivot.transform;
+
+            projectilesRb.AddForce(Vector3.forward * projectileSpeed);
+
+            Destroy(newProjectiles, 3.0f);
         }
+
+
     }
 }

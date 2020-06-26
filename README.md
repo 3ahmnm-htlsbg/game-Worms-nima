@@ -16,8 +16,9 @@ The player whose health bar is empty first, is the loser.
 * WebGL 
 
 ### Visuals: 
-
-### Project State
+<div>
+<img src = "./Screenshots/game-Worms-nima.JPG" width = "500">
+</div>
 
 ### Limitations: 
 None

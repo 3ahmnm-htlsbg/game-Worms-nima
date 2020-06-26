@@ -15,4 +15,8 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+    public void LoadControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }

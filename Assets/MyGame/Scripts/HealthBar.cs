@@ -15,13 +15,14 @@ public class HealthBar : MonoBehaviour
     public float currentHealth;
 
     public GameObject winnerText;
-
+    
 
 
     void Start()
     {
         slider.value = maxHealth;
         currentHealth = slider.value;
+        
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -40,6 +41,7 @@ public class HealthBar : MonoBehaviour
         {
             winnerText.SetActive(true);
             StartCoroutine(LoadScene());
+
             
         }
     }

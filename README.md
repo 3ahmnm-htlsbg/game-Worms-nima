@@ -17,7 +17,7 @@ The player whose health bar is empty first, is the loser.
 
 ### Visuals: 
 <div>
-<img src = "./Screenshots/game-Worms-nima.JPG" width = "500">
+<img src = "./Screenshots/game-Worms-nima.PNG" >
 </div>
 
 ### Limitations: 
